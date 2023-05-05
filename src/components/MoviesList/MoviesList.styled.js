@@ -22,7 +22,7 @@ export const Item = styled.li`
   text-align: center;
 `;
 
-export const NavLink = styled(Link)`
+export const MovieLink = styled(Link)`
   color: black;
   font-size: 16px;
   font-weight: 500;

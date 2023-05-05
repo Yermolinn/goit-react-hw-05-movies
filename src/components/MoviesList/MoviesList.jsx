@@ -5,7 +5,7 @@ import {
   List,
   Item,
   ImageWrapper,
-  NavLink,
+  MovieLink,
   ProgressBarContainer,
   Progressbar,
 } from './MoviesList.styled';
@@ -22,7 +22,7 @@ const MoviesList = ({ movies, setContentIsLoading, contentIsLoading }) => {
       {movies.map(({ title, id, poster, averageVote }) => {
         return (
           <Item key={id}>
-            <NavLink to={`/movies/${id}`} state={{ from: location }}>
+            <MovieLink to={`/movies/${id}`} state={{ from: location }}>
               <ImageWrapper>
                 <img
                   src={poster}
@@ -37,7 +37,7 @@ const MoviesList = ({ movies, setContentIsLoading, contentIsLoading }) => {
                 </ProgressBarContainer>
               </ImageWrapper>
               <h2>{title}</h2>
-            </NavLink>
+            </MovieLink>
           </Item>
         );
       })}
